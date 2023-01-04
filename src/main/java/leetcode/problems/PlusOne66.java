@@ -2,7 +2,7 @@ package leetcode.problems;
 /*
 * @problem https://leetcode.cn/problems/plus-one/
 * */
-public class plus_one_66 {
+public class PlusOne66 {
     public static void main(String[] args) {
         int[] digits = new int[4];
         digits[0]=4;

@@ -7,7 +7,7 @@ import java.util.Map;
  * @author wyx
  * @problem https://leetcode.cn/problems/roman-to-integer/
  */
-public class roman_to_integer_13 {
+public class RomanToInteger13 {
     public static void main(String[] args) {
         System.out.println(romanToInt("MCMXCIV"));
     }
