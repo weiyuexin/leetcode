@@ -6,31 +6,29 @@ import java.util.List;
 /**
  * @PackageName: leetcode.problems
  * @ProjectName: leetcode
- * @ClassName: _94二叉树的中序遍历
+ * @ClassName: _145二叉树的后序遍历
  * @Author: Weiyuexin
  * @Email: 3022422894@qq.com
- * @Date: 2023/2/1 22:24
+ * @Date: 2023/2/1 22:50
  */
-public class _94二叉树的中序遍历 {
+public class _145二叉树的后序遍历 {
     public static void main(String[] args) {
 
     }
-    // TODO 二叉树中序遍历
-    public static List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
-        inorder(root, res);
-        return res;
+    // TODO 二叉树后序遍历
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        postorder(root,ans);
+        return ans;
     }
-    public static void inorder(TreeNode root, List<Integer> res) {
-        if (root == null) {
+    public void postorder(TreeNode root,List<Integer> ans){
+        if (root == null){
             return;
         }
-        inorder(root.left, res);
-        res.add(root.val);
-        inorder(root.right, res);
+        postorder(root.left,ans);
+        postorder(root.right,ans);
+        ans.add(root.val);
     }
-
-
     public class TreeNode {
         int val;
         TreeNode left;
